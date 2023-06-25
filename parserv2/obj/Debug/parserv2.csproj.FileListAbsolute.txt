@@ -1,0 +1,14 @@
+D:\workfile\vswindowsform\parserv2\parserv2\bin\Debug\parserv2.exe.config
+D:\workfile\vswindowsform\parserv2\parserv2\bin\Debug\parserv2.exe
+D:\workfile\vswindowsform\parserv2\parserv2\bin\Debug\parserv2.pdb
+D:\workfile\vswindowsform\parserv2\parserv2\bin\Debug\HtmlAgilityPack.dll
+D:\workfile\vswindowsform\parserv2\parserv2\bin\Debug\HtmlAgilityPack.pdb
+D:\workfile\vswindowsform\parserv2\parserv2\bin\Debug\HtmlAgilityPack.xml
+D:\workfile\vswindowsform\parserv2\parserv2\obj\Debug\parserv2.csproj.AssemblyReference.cache
+D:\workfile\vswindowsform\parserv2\parserv2\obj\Debug\parserv2.csproj.SuggestedBindingRedirects.cache
+D:\workfile\vswindowsform\parserv2\parserv2\obj\Debug\parserv2.csproj.CoreCompileInputs.cache
+D:\workfile\vswindowsform\parserv2\parserv2\obj\Debug\parserv2.csproj.CopyComplete
+D:\workfile\vswindowsform\parserv2\parserv2\obj\Debug\parserv2.exe
+D:\workfile\vswindowsform\parserv2\parserv2\obj\Debug\parserv2.pdb
+D:\workfile\vswindowsform\parserv2\parserv2\bin\Debug\Microsoft.Web.XmlTransform.dll
+D:\workfile\vswindowsform\parserv2\parserv2\bin\Debug\NuGet.Core.dll
