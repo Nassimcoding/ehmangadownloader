@@ -94,8 +94,16 @@ namespace parserv2
                 //do download imag secsion
                 try
                 {
+                    string stringtemp = Console.ReadLine();
+                    int pagetemp;
+                    //let user can select page
+                    if (!int.TryParse(stringtemp, out pagetemp))
+                    {
+                        pagetemp = 0;
+                    }
+
                     //go url
-                    Console.WriteLine(MParserimg(GstrURL, 0));
+                    Console.WriteLine(MParserimg(GstrURL, pagetemp));
                 }
                 finally
                 {
