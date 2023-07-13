@@ -12,3 +12,17 @@ D:\workfile\vswindowsform\parserv2\parserv2\obj\Debug\ehmangadownloader.csproj.C
 D:\workfile\vswindowsform\parserv2\parserv2\obj\Debug\ehmangadownloader.csproj.CopyComplete
 D:\workfile\vswindowsform\parserv2\parserv2\obj\Debug\parserv2.exe
 D:\workfile\vswindowsform\parserv2\parserv2\obj\Debug\parserv2.pdb
+D:\mangaparser\ehmangadownloader\parserv2\bin\Debug\parserv2.exe.config
+D:\mangaparser\ehmangadownloader\parserv2\bin\Debug\parserv2.exe
+D:\mangaparser\ehmangadownloader\parserv2\bin\Debug\parserv2.pdb
+D:\mangaparser\ehmangadownloader\parserv2\bin\Debug\HtmlAgilityPack.dll
+D:\mangaparser\ehmangadownloader\parserv2\bin\Debug\Microsoft.Web.XmlTransform.dll
+D:\mangaparser\ehmangadownloader\parserv2\bin\Debug\NuGet.Core.dll
+D:\mangaparser\ehmangadownloader\parserv2\bin\Debug\HtmlAgilityPack.pdb
+D:\mangaparser\ehmangadownloader\parserv2\bin\Debug\HtmlAgilityPack.xml
+D:\mangaparser\ehmangadownloader\parserv2\obj\Debug\ehmangadownloader.csproj.AssemblyReference.cache
+D:\mangaparser\ehmangadownloader\parserv2\obj\Debug\ehmangadownloader.csproj.SuggestedBindingRedirects.cache
+D:\mangaparser\ehmangadownloader\parserv2\obj\Debug\ehmangadownloader.csproj.CoreCompileInputs.cache
+D:\mangaparser\ehmangadownloader\parserv2\obj\Debug\ehmangadownloader.csproj.CopyComplete
+D:\mangaparser\ehmangadownloader\parserv2\obj\Debug\parserv2.exe
+D:\mangaparser\ehmangadownloader\parserv2\obj\Debug\parserv2.pdb
