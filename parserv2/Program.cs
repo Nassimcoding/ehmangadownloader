@@ -370,7 +370,7 @@ namespace parserv2
             MANGA_img_URL = new List<string>(MANGA_URL.Split('/'))[4];
             //Console.WriteLine(MANGA_img_URL);
             HtmlWeb target_Web_URL = new HtmlWeb();
-            target_Document = target_Web_URL.Load(MANGA_URL);
+            target_Document = target_Web_URL.Load(MANGA_URL + "?nw=session");
         }
         //reference url
         //https://dotblogs.com.tw/Lance_Blog/2019/03/10/114838
