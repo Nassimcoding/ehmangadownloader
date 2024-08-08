@@ -127,6 +127,8 @@ namespace parserv2
 
             void processListString_toLocal_Imag()
             {
+                //make it to processing state
+                MANGA_Processing_Mark = 0;
                 while (MANGA_Processing_Mark != -1)
                 {
                     //do download imag secsion

@@ -26,3 +26,16 @@ D:\mangaparser\ehmangadownloader\parserv2\obj\Debug\ehmangadownloader.csproj.Cor
 D:\mangaparser\ehmangadownloader\parserv2\obj\Debug\ehmangadownloader.csproj.CopyComplete
 D:\mangaparser\ehmangadownloader\parserv2\obj\Debug\parserv2.exe
 D:\mangaparser\ehmangadownloader\parserv2\obj\Debug\parserv2.pdb
+D:\comic\1program\ehmangadownloader20240808\ehmangadownloader\parserv2\bin\Debug\parserv2.exe.config
+D:\comic\1program\ehmangadownloader20240808\ehmangadownloader\parserv2\bin\Debug\parserv2.exe
+D:\comic\1program\ehmangadownloader20240808\ehmangadownloader\parserv2\bin\Debug\parserv2.pdb
+D:\comic\1program\ehmangadownloader20240808\ehmangadownloader\parserv2\bin\Debug\HtmlAgilityPack.dll
+D:\comic\1program\ehmangadownloader20240808\ehmangadownloader\parserv2\bin\Debug\Microsoft.Web.XmlTransform.dll
+D:\comic\1program\ehmangadownloader20240808\ehmangadownloader\parserv2\bin\Debug\NuGet.Core.dll
+D:\comic\1program\ehmangadownloader20240808\ehmangadownloader\parserv2\bin\Debug\HtmlAgilityPack.pdb
+D:\comic\1program\ehmangadownloader20240808\ehmangadownloader\parserv2\bin\Debug\HtmlAgilityPack.xml
+D:\comic\1program\ehmangadownloader20240808\ehmangadownloader\parserv2\obj\Debug\ehmangadownloader.csproj.AssemblyReference.cache
+D:\comic\1program\ehmangadownloader20240808\ehmangadownloader\parserv2\obj\Debug\ehmangadownloader.csproj.CoreCompileInputs.cache
+D:\comic\1program\ehmangadownloader20240808\ehmangadownloader\parserv2\obj\Debug\ehmangad.83EA995B.Up2Date
+D:\comic\1program\ehmangadownloader20240808\ehmangadownloader\parserv2\obj\Debug\parserv2.exe
+D:\comic\1program\ehmangadownloader20240808\ehmangadownloader\parserv2\obj\Debug\parserv2.pdb
