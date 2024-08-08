@@ -79,25 +79,44 @@ namespace parserv2
                         // Assign the cookie container to the request
                         if (request is HttpWebRequest webRequest)
                         {
+                            // Set the timeout to 5 seconds (5000 milliseconds)
+                            webRequest.Timeout = 5000; // Timeout in milliseconds
+
                             webRequest.CookieContainer = cookieContainer;
                         }
 
                         return true; // Indicate that the request should proceed
                     };
-                    HtmlDocument target_img_url = page_url.Load(page_urls[i]);
-                    HtmlNode target_img = target_img_url.DocumentNode.SelectSingleNode(
-                        $"//img[@id='img']");
-
-                    string imageUrl = target_img.GetAttributeValue("src", "");
-                    string savePath = @"D:\comic\" + MANGA_Title + @"\ "
-                        + Convert.ToString(i + 1) + ".png"; // 設定儲存路徑
-                    //download img and output seccess message
-                    using (WebClient client = new WebClient())
+                    try
                     {
-                        client.DownloadFile(imageUrl, savePath);
-                        Console.WriteLine("success " + MANGA_Title + " "
-                            + Convert.ToString(i + 1));
+                        HtmlDocument target_img_url = page_url.Load(page_urls[i]);
+                        HtmlNode target_img = target_img_url.DocumentNode.SelectSingleNode(
+                            $"//img[@id='img']");
+
+                        string imageUrl = target_img.GetAttributeValue("src", "");
+                        string savePath = @"D:\comic\" + MANGA_Title + @"\ "
+                            + Convert.ToString(i + 1) + ".png"; // 設定儲存路徑
+                                                                //download img and output seccess message
+                        using (WebClient client = new WebClient())
+                        {
+                            client.DownloadFile(imageUrl, savePath);
+                            Console.WriteLine("success " + MANGA_Title + " "
+                                + Convert.ToString(i + 1));
+                        }
                     }
+                    catch (WebException ex)
+                    {
+                        // Handle timeout and other web exceptions
+                        if (ex.Status == WebExceptionStatus.Timeout)
+                        {
+                            Console.WriteLine("Connection timed out for page " + (i + 1) + ". Skipping to next.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("An error occurred for page " + (i + 1) + ": " + ex.Message + " Skipping to next.");
+                        }
+                    }
+
                 }
                 //clear string list
                 GstrURL.Clear();
@@ -108,41 +127,27 @@ namespace parserv2
 
             void processListString_toLocal_Imag()
             {
-                //do download imag secsion
-                try
+                while (MANGA_Processing_Mark != -1)
                 {
-                    //continue image from number
-                    Console.WriteLine("\nPlease input image index");
-                    string stringtemp = Console.ReadLine();
-                    int pagetemp;
-                    //let user can select page
-                    if (!int.TryParse(stringtemp, out pagetemp))
-                    {
-                        pagetemp = 0;
-                    }
-
-                    //go url
-                    Console.WriteLine(MParserimg(GstrURL, pagetemp));
-                }
-                finally
-                {
-                    while (MANGA_Processing_Mark != -1)
+                    //do download imag secsion
+                    try
                     {
                         //continue image from number
-                        Console.WriteLine("\nPlease try again input continue image number");
-                        //if input valid number 
-                        int intcontinue;
-                        try
+                        Console.WriteLine("\nPlease input image index");
+                        string stringtemp = Console.ReadLine();
+                        int pagetemp;
+                        //let user can select page
+                        if (!int.TryParse(stringtemp, out pagetemp))
                         {
-                            intcontinue = Convert.ToInt32(Console.ReadLine());
+                            pagetemp = 0;
                         }
-                        catch (Exception eintcontinue)
-                        {
-                            //if input worng again go 0 default restart
-                            Console.WriteLine(eintcontinue + "\nplease input number or restart on last download page");
-                            intcontinue = MANGA_Processing_Mark--;
-                        }
-                        Console.WriteLine(MParserimg(GstrURL, intcontinue));
+
+                        //go url
+                        Console.WriteLine(MParserimg(GstrURL, pagetemp));
+                    }
+                    finally
+                    {
+                        Console.WriteLine("\nError skip this img");
                     }
                 }
             }
