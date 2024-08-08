@@ -67,6 +67,23 @@ namespace parserv2
                     //make processing mark = current processong page
                     MANGA_Processing_Mark++;
                     HtmlWeb page_url = new HtmlWeb();
+                    // Set the PreRequest handler to add a cookie
+                    page_url.PreRequest = request =>
+                    {
+                        // Create a new cookie container
+                        CookieContainer cookieContainer = new CookieContainer();
+
+                        // Add a cookie (change the name and value to match your requirement)
+                        cookieContainer.Add(new Cookie("nw", "1", "/", "e-hentai.org"));
+
+                        // Assign the cookie container to the request
+                        if (request is HttpWebRequest webRequest)
+                        {
+                            webRequest.CookieContainer = cookieContainer;
+                        }
+
+                        return true; // Indicate that the request should proceed
+                    };
                     HtmlDocument target_img_url = page_url.Load(page_urls[i]);
                     HtmlNode target_img = target_img_url.DocumentNode.SelectSingleNode(
                         $"//img[@id='img']");
@@ -94,6 +111,8 @@ namespace parserv2
                 //do download imag secsion
                 try
                 {
+                    //continue image from number
+                    Console.WriteLine("\nPlease input image index");
                     string stringtemp = Console.ReadLine();
                     int pagetemp;
                     //let user can select page
@@ -300,6 +319,23 @@ namespace parserv2
                 //p = pages ,nw=no warning and like session 
                 string url = MANGA_URL + $"/?p={i}?nw=session";
                 HtmlWeb htmlwebtemp = new HtmlWeb();
+                // Set the PreRequest handler to add a cookie
+                htmlwebtemp.PreRequest = request =>
+                {
+                    // Create a new cookie container
+                    CookieContainer cookieContainer = new CookieContainer();
+
+                    // Add a cookie (change the name and value to match your requirement)
+                    cookieContainer.Add(new Cookie("nw", "1", "/", "e-hentai.org"));
+
+                    // Assign the cookie container to the request
+                    if (request is HttpWebRequest webRequest)
+                    {
+                        webRequest.CookieContainer = cookieContainer;
+                    }
+
+                    return true; // Indicate that the request should proceed
+                };
                 HtmlDocument manga_page_document = htmlwebtemp.Load(url);
                 HtmlNodeCollection divelements = manga_page_document.DocumentNode.SelectNodes(
                 $"//div[contains(@class, 'gdtm')]//a[contains(@href,{MANGA_img_URL})]");
@@ -370,6 +406,23 @@ namespace parserv2
             MANGA_img_URL = new List<string>(MANGA_URL.Split('/'))[4];
             //Console.WriteLine(MANGA_img_URL);
             HtmlWeb target_Web_URL = new HtmlWeb();
+            // Set the PreRequest handler to add a cookie
+            target_Web_URL.PreRequest = request =>
+            {
+                // Create a new cookie container
+                CookieContainer cookieContainer = new CookieContainer();
+
+                // Add a cookie (change the name and value to match your requirement)
+                cookieContainer.Add(new Cookie("nw", "1", "/", "e-hentai.org"));
+
+                // Assign the cookie container to the request
+                if (request is HttpWebRequest webRequest)
+                {
+                    webRequest.CookieContainer = cookieContainer;
+                }
+
+                return true; // Indicate that the request should proceed
+            };
             target_Document = target_Web_URL.Load(MANGA_URL + "?nw=session");
         }
         //reference url
