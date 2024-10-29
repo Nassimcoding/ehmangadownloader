@@ -345,7 +345,7 @@ namespace parserv2
                 };
                 HtmlDocument manga_page_document = htmlwebtemp.Load(url);
                 HtmlNodeCollection divelements = manga_page_document.DocumentNode.SelectNodes(
-                $"//div[contains(@class, 'gdtm')]//a[contains(@href,{MANGA_img_URL})]");
+                $"//div[contains(@class, 'gt100')]//a[contains(@href,{MANGA_img_URL})]");
                 //add img url to list<string>
                 if (divelements != null && divelements.Count > 0)
                 {
