@@ -29,7 +29,7 @@ namespace parserv2
             string MANGA_Pages_Numbers = string.Empty;
             string MANGA_Title = string.Empty;
             int MANGA_intPages = 0;
-            const int MANGA_AverageNumbers = 40;
+            const int MANGA_AverageNumbers = 20;
             int MANGA_Processing_Mark = 0;
 
             while (true)
@@ -345,7 +345,7 @@ namespace parserv2
                 };
                 HtmlDocument manga_page_document = htmlwebtemp.Load(url);
                 HtmlNodeCollection divelements = manga_page_document.DocumentNode.SelectNodes(
-                $"//div[contains(@class, 'gt100')]//a[contains(@href,{MANGA_img_URL})]");
+                $"//div[contains(@class, 'gt200')]//a[contains(@href,{MANGA_img_URL})]");
                 //add img url to list<string>
                 if (divelements != null && divelements.Count > 0)
                 {
